@@ -6,6 +6,26 @@ repo_name: 'bobbyxdevel/bobbyx-docs'
 repo_url: 'https://github.com/bobbyxdevel/bobbyx-docs'
 nav:
     - Home: index.md
+    - Distributions & Distrohopping:
+        - Introduction: distributions/intro.md
+        - Arch Linux: distributions/arch.md
+        - Ubuntu: distributions/ubuntu.md
+    - System Administration:
+        - Basics: system_administration/basics.md
+        - Advanced: system_administration/advanced.md
+    - Package Management: package_management.md
+    - Scripting & Automation:
+        - Bash: scripting_automation/bash.md
+        - Python: scripting_automation/python.md
+    - Desktop Environments & Window Managers:
+        - GNOME: desktop_environments/gnome.md
+        - KDE: desktop_environments/kde.md
+    - Kernel & Drivers: kernel_drivers.md
+    - Networking: networking.md
+    - Security & Hardening: security_hardening.md
+    - Filesystems & Storage: filesystems_storage.md
+    - Development & Productivity Tools: development_productivity.md
+    - BSD Corner: bsd_corner.md
 theme:
   name: 'material'
   palette:
