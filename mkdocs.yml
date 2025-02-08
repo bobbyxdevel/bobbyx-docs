@@ -18,7 +18,7 @@ nav:
 #        - Bash: scripting_automation/bash.md
 #        - Python: scripting_automation/python.md
     - Desktop Environments & Window Managers:
-        - GNOME: desktop_environments/bspwm.md
+        - bspwm: desktop_environments/bspwm.md
 #    - Kernel & Drivers: kernel_drivers.md
 #    - Networking: networking.md
 #    - Security & Hardening: security_hardening.md
