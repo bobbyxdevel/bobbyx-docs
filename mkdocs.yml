@@ -25,6 +25,7 @@ nav:
 #    - Filesystems & Storage: filesystems_storage.md
 #    - Development & Productivity Tools: development_productivity.md
 #    - BSD Corner: bsd_corner.md
+    - Server: server/vps.md
 theme:
   name: 'material'
   palette:
