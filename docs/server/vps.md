@@ -218,7 +218,3 @@ By following these steps, you now have a robust self-hosted Nextcloud instance m
 
 - Portainer Installation Guides – Shapehost and HowtoForge
 - Nextcloud Docker deployments and templates – GitHub: tv0ll/portainer-nextcloud and community discussions (Nextcloud AIO thread)
-
----
-
-You can view the updated file [here](https://github.com/bobbyxdevel/bobbyx-docs/blob/1a42693dfd7ca20ddefc5d674fc993947e713d76/docs/server/vps.md).
