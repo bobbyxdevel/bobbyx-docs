@@ -3,7 +3,7 @@ site_description: 'A docs test'
 site_author: 'bobbyxdevel'
 docs_dir: docs/
 repo_name: 'bobbyxdevel/bobbyx-docs'
-repo_url: 'https://github.com/mhausenblas/bobbyxdevel/bobbyx-docs'
+repo_url: 'https://github.com/bobbyxdevel/bobbyx-docs'
 nav:
     - Home: index.md
 theme:
