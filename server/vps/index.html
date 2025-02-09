@@ -1,0 +1,1063 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation about everything linux related!">
+      
+      
+        <meta name="author" content="bobbyxdevel">
+      
+      
+      
+        <link rel="prev" href="../../desktop_environments/bspwm/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Server - bobbyxdevel docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vps-setup-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="bobbyxdevel docs" class="md-header__button md-logo" aria-label="bobbyxdevel docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            bobbyxdevel docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Server
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/bobbyxdevel/bobbyx-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bobbyxdevel/bobbyx-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="bobbyxdevel docs" class="md-nav__button md-logo" aria-label="bobbyxdevel docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    bobbyxdevel docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/bobbyxdevel/bobbyx-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    bobbyxdevel/bobbyx-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Distributions & Distrohopping
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Distributions & Distrohopping
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../distributions/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Desktop Environments & Window Managers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Desktop Environments & Window Managers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../desktop_environments/bspwm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    bspwm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Server
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Server
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup-create-a-nonroot-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Setup: Create a Non‑Root User
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initial Setup: Create a Non‑Root User">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-docker-on-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Docker on Debian
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Docker on Debian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-portainer-for-docker-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Portainer for Docker Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Portainer for Docker Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-nextcloud-via-portainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy Nextcloud via Portainer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy Nextcloud via Portainer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-docker-compose-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Docker Compose File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Steps:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-your-domain-and-reverse-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Your Domain and Reverse Proxy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Your Domain and Reverse Proxy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-reverse-proxy-and-ssl-with-swag" class="md-nav__link">
+    <span class="md-ellipsis">
+      (Optional) Reverse Proxy and SSL with SWAG
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup-create-a-nonroot-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Setup: Create a Non‑Root User
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initial Setup: Create a Non‑Root User">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-docker-on-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Docker on Debian
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Docker on Debian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-portainer-for-docker-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Portainer for Docker Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Portainer for Docker Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-nextcloud-via-portainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy Nextcloud via Portainer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy Nextcloud via Portainer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-docker-compose-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Docker Compose File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Steps:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-your-domain-and-reverse-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Your Domain and Reverse Proxy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Your Domain and Reverse Proxy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-reverse-proxy-and-ssl-with-swag" class="md-nav__link">
+    <span class="md-ellipsis">
+      (Optional) Reverse Proxy and SSL with SWAG
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="vps-setup-guide">VPS Setup Guide</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#initial-setup-create-a-non-root-user">Initial Setup: Create a Non‑Root User</a></li>
+<li><a href="#install-docker-on-debian">Install Docker on Debian</a></li>
+<li><a href="#install-portainer-for-docker-management">Install Portainer for Docker Management</a></li>
+<li><a href="#deploy-nextcloud-via-portainer">Deploy Nextcloud via Portainer</a></li>
+<li><a href="#configure-your-domain-and-reverse-proxy">Configure Your Domain and Reverse Proxy</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#references">References</a></li>
+</ol>
+<hr />
+<h2 id="initial-setup-create-a-nonroot-user">Initial Setup: Create a Non‑Root User</h2>
+<p>A fresh Debian installation may only have the root account enabled. For better security and daily use, create a non‑root user with sudo privileges.</p>
+<h3 id="steps">Steps:</h3>
+<ol>
+<li><strong>Log in as root:</strong></li>
+<li>
+<p>At the console or via SSH, log in with the root credentials provided during installation.</p>
+</li>
+<li>
+<p><strong>Create a new user (e.g., <code>admin</code>):</strong>
+   <code>sh
+   adduser admin</code></p>
+</li>
+<li>
+<p>Follow the prompts to set a password and fill in any optional details.</p>
+</li>
+<li>
+<p><strong>Grant the new user sudo privileges:</strong>
+   <code>sh
+   usermod -aG sudo admin</code></p>
+</li>
+<li>
+<p><strong>Log out and log back in as the new user:</strong></p>
+</li>
+<li>You can now perform administrative tasks using <code>sudo</code>.</li>
+</ol>
+<hr />
+<h2 id="install-docker-on-debian">Install Docker on Debian</h2>
+<p>(Based on best practices from guides such as Shapehost’s tutorial and HowtoForge)</p>
+<h3 id="steps_1">Steps:</h3>
+<ol>
+<li>
+<p><strong>Update the system and install prerequisites:</strong>
+   <code>sh
+   sudo apt update
+   sudo apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y</code></p>
+</li>
+<li>
+<p><strong>Add Docker’s official GPG key and repository:</strong>
+   <code>sh
+   curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</code></p>
+</li>
+<li>
+<p><strong>Install Docker CE:</strong>
+   <code>sh
+   sudo apt update
+   sudo apt install docker-ce -y</code></p>
+</li>
+<li>
+<p><strong>Verify Docker is installed:</strong>
+   <code>sh
+   docker --version</code></p>
+</li>
+<li>You should see output like <code>Docker version 20.10.xx, build xxxxxxx</code>.</li>
+</ol>
+<hr />
+<h2 id="install-portainer-for-docker-management">Install Portainer for Docker Management</h2>
+<p>Portainer provides a web-based interface to easily manage your Docker containers.</p>
+<h3 id="steps_2">Steps:</h3>
+<ol>
+<li>
+<p><strong>Create a Docker volume for Portainer’s data:</strong>
+   <code>sh
+   sudo docker volume create portainer_data</code></p>
+</li>
+<li>
+<p><strong>Deploy the Portainer container:</strong>
+   <code>sh
+   sudo docker run -d \
+     -p 8000:8000 \
+     -p 9000:9000 \
+     --name=portainer \
+     --restart=always \
+     -v /var/run/docker.sock:/var/run/docker.sock \
+     -v portainer_data:/data \
+     portainer/portainer-ce:latest</code></p>
+</li>
+<li>
+<p><strong>Access Portainer’s Web UI:</strong></p>
+</li>
+<li>Open your browser and go to <code>http://&lt;your-vps-public-ip&gt;:9000</code></li>
+<li>Create an admin account when prompted and select “Local” to manage your Docker host.</li>
+</ol>
+<hr />
+<h2 id="deploy-nextcloud-via-portainer">Deploy Nextcloud via Portainer</h2>
+<p>Using Portainer’s “Stacks” feature you can deploy a multi‑container Docker Compose file. In this example, Nextcloud is deployed with a MariaDB backend.</p>
+<h3 id="example-docker-compose-file">Example Docker Compose File</h3>
+<p>Create a stack (either via Portainer’s UI or by saving this YAML file locally) similar to the following. Adjust host paths and environment variables as needed.</p>
+<pre><code class="language-yaml">version: &quot;3.8&quot;
+
+services:
+  nextcloud:
+    image: linuxserver/nextcloud:latest
+    container_name: nextcloud
+    environment:
+      - PUID=1000            # Ensure this matches your non-root user (e.g., admin)
+      - PGID=1000
+      - TZ=Europe/Berlin      # Adjust timezone as required
+      # Additional Nextcloud settings (upload limits, memory, etc.) can be added here
+    volumes:
+      - /srv/nextcloud/config:/config    # Persistent config directory on the host
+      - /srv/nextcloud/data:/data          # Persistent data directory on the host
+    ports:
+      - &quot;8080:443&quot;           # Map container HTTPS port to host port 8080 (for initial setup)
+    restart: unless-stopped
+    depends_on:
+      - nextcloud-db
+
+  nextcloud-db:
+    image: linuxserver/mariadb:latest
+    container_name: nextcloud-db
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin
+      - MYSQL_ROOT_PASSWORD=YourRootPassword
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=YourDBPassword
+    volumes:
+      - /srv/nextcloud/db:/config
+    restart: unless-stopped
+
+networks:
+  default:
+    driver: bridge
+</code></pre>
+<h3 id="deployment-steps">Deployment Steps:</h3>
+<ol>
+<li>In Portainer, navigate to Stacks and click Add stack.</li>
+<li>Paste the YAML above (or upload your file), give the stack a name (e.g., “Nextcloud”), and click Deploy the stack.</li>
+<li>Once deployed, access Nextcloud by navigating to <code>http://&lt;your-vps-public-ip&gt;:8080</code></li>
+<li>Complete the web installer by entering the database details you specified.</li>
+</ol>
+<p>For more examples and custom templates, see community templates such as the GitHub repository by tv0ll.</p>
+<hr />
+<h2 id="configure-your-domain-and-reverse-proxy">Configure Your Domain and Reverse Proxy</h2>
+<p>To make Nextcloud available at <code>nextcloud.bobbyxdev.xyz</code> and secure it with HTTPS, follow these steps:</p>
+<h3 id="dns-setup">DNS Setup</h3>
+<ol>
+<li><strong>Log in to your DNS provider’s control panel.</strong></li>
+<li><strong>Create an A record for the subdomain:</strong></li>
+<li><strong>Name/Host:</strong> nextcloud</li>
+<li><strong>Type:</strong> A</li>
+<li><strong>Value:</strong> Your VPS public IP</li>
+</ol>
+<p>This points <code>nextcloud.bobbyxdev.xyz</code> to your VPS.</p>
+<h3 id="optional-reverse-proxy-and-ssl-with-swag">(Optional) Reverse Proxy and SSL with SWAG</h3>
+<p>For production use, it’s recommended to front Nextcloud with a reverse proxy that handles SSL:</p>
+<ol>
+<li>
+<p><strong>Deploy a reverse proxy container such as SWAG (Secure Web Application Gateway by linuxserver.io) or Nginx Proxy Manager.</strong> For example, SWAG can be deployed like this:
+   <code>sh
+   sudo docker run -d \
+     --name=swag \
+     --cap-add=NET_ADMIN \
+     -e PUID=1000 \
+     -e PGID=1000 \
+     -e TZ=Europe/Berlin \
+     -e URL=bobbyxdev.xyz \
+     -e SUBDOMAINS=nextcloud \
+     -e VALIDATION=http \
+     -p 80:80 \
+     -p 443:443 \
+     -v /path/to/swag/config:/config \
+     --restart unless-stopped \
+     linuxserver/swag</code></p>
+</li>
+<li>
+<p><strong>Configure SWAG:</strong></p>
+</li>
+<li>
+<p>Set up a reverse proxy rule so that requests to <code>nextcloud.bobbyxdev.xyz</code> are forwarded to your Nextcloud container (e.g., to <code>localhost:8080</code>). Consult the SWAG documentation for instructions on customizing your setup.</p>
+</li>
+<li>
+<p><strong>Update Nextcloud’s trusted domains:</strong></p>
+</li>
+<li>Edit the Nextcloud configuration file (found in your mounted <code>/srv/nextcloud/config</code> directory) to include your subdomain:
+     <code>php
+     'trusted_domains' =&gt;
+       array (
+         0 =&gt; 'localhost',
+         1 =&gt; 'nextcloud.bobbyxdev.xyz',
+       ),</code></li>
+</ol>
+<p>This ensures Nextcloud accepts connections from your domain.</p>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>This guide has taken you from a fresh Debian installation (starting with only a root account) through creating a new administrative user, installing Docker and Portainer, deploying a Nextcloud stack, configuring your domain, and setting up a reverse proxy with SSL.</p>
+<p>By following these steps, you now have a robust self-hosted Nextcloud instance managed via Portainer on your Debian VPS. For further customization or troubleshooting, consult the official documentation.</p>
+<hr />
+<h2 id="references">References</h2>
+<ul>
+<li>Portainer Installation Guides – Shapehost and HowtoForge</li>
+<li>Nextcloud Docker deployments and templates – GitHub: tv0ll/portainer-nextcloud and community discussions (Nextcloud AIO thread)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
