@@ -1,5 +1,5 @@
-site_name: bobbyx docs
-site_description: 'A docs test'
+site_name: bobbyxdevel docs
+site_description: 'Documentation about everything linux related!'
 site_author: 'bobbyxdevel'
 docs_dir: docs/
 repo_name: 'bobbyxdevel/bobbyx-docs'
